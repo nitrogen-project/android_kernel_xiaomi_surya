@@ -1495,8 +1495,13 @@ static void __ip6_rt_update_pmtu(struct dst_entry *dst, const struct sock *sk,
 		saddr = NULL;
 	}
 
-	if (confirm_neigh)
+	if (confirm_neigh){
 		dst_confirm_neigh(dst, daddr);
+	}
+
+	if(mtu < IPV6_MIN_MTU){
+		return;
+	}
 
 	mtu = max_t(u32, mtu, IPV6_MIN_MTU);
 	if (mtu >= dst_mtu(dst))

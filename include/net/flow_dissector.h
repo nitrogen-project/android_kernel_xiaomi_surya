@@ -5,7 +5,10 @@
 #include <linux/types.h>
 #include <linux/in6.h>
 #include <linux/siphash.h>
+<<<<<<< HEAD
 #include <linux/string.h>
+=======
+>>>>>>> 5e0a8dada006... Kernel: Xiaomi kernel changes for Redmi POCO X3 Android Q
 #include <uapi/linux/if_ether.h>
 
 /**
